@@ -1,16 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Person } from '../person';
 
 @Component({
-  selector: 'app-person-form',
-  templateUrl: './person-form.component.html',
-  styleUrls: ['./person-form.component.css']
+  selector: 'app-person-form-reactive',
+  templateUrl: './person-form-reactive.component.html',
+  styleUrls: ['./person-form-reactive.component.css']
 })
-export class PersonFormComponent implements OnInit {
+export class PersonFormReactiveComponent implements OnInit {
 
   model: Person;
 
   genders: number[] = [ 1, 2 ];
+
 
   constructor() {
     const person = new Person();
@@ -28,4 +30,5 @@ export class PersonFormComponent implements OnInit {
   onSubmit() {
     console.log(this.model);
   }
+
 }

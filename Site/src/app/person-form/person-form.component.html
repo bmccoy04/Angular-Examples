@@ -1,28 +1,30 @@
-<p>
-  person-form works!
-</p>
-<div class="form-group">
-  <label for="FirstName">First Name</label>
+<form (ngSubmit)="onSubmit()" #personForm="ngForm">
+  <p>
+    person-form works!
+  </p>
+  <div class="form-group">
+    <label for="FirstName">First Name</label>
+    <br>
+    <input type="text" class="form-control" 
+      id="FirstName"
+      [(ngModel)]="model.FirstName" 
+      name="FirstName" 
+      required >
+  </div>
   <br>
-  <input type="text" class="form-control" id="FirstName"
-         required
-         [(ngModel)]="model.FirstName" name="FirstName">
-</div>
-<br>
-<div class="form-group">
-  <label for="LastName">Last Name</label>
+  <div class="form-group">
+    <label for="LastName">Last Name</label>
+    <br>
+    <input type="text" class="form-control" id="LastName" [(ngModel)]="model.LastName" name="LastName">
+  </div>
   <br>
-  <input type="text" class="form-control" id="LastName"
-         required
-         [(ngModel)]="model.LastName" name="LastName">
-</div>
-<br>
-<div class="form-group">
-  <label for="Gender">Gender</label>
+  <div class="form-group">
+    <label for="Gender">Gender</label>
+    <br>
+    <input type="text" class="form-control" id="Gender"  [(ngModel)]="model.Gender" name="Gender">
+  </div>
   <br>
-  <input type="text" class="form-control" id="Gender"
-         required
-         [(ngModel)]="model.Gender" name="Gender">
-</div>
-
-<button></button>
+  <button type="submit" [disabled]="!personForm.form.valid">
+    Submit
+  </button>
+</form>
