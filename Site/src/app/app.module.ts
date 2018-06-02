@@ -3,10 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { FormComponent } from './form/form.component';
+import { SharedComponent } from './shared/shared.component';
+import { PersonFormComponent } from './person-form/person-form.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DashboardComponent,
+    FormComponent,
+    SharedComponent,
+    PersonFormComponent
   ],
   imports: [
     BrowserModule,
