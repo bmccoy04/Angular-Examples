@@ -8,7 +8,19 @@ import { Person } from '../person';
 })
 export class PersonFormComponent implements OnInit {
 
-  constructor() { }
+  model: Person;
+
+  genders: number[] = [1,2];
+
+  constructor() {
+    let person = new Person();
+    person.FirstName = "Bryan";
+    person.LastName = "McCoy";
+    person.Gender = 1;
+    person.Id = 42;
+
+    this.model = person;
+   }
 
   ngOnInit() {
   }
