@@ -10,6 +10,7 @@ import { SharedComponent } from './shared/shared.component';
 import { PersonFormComponent } from './person-form/person-form.component';
 import { PersonFormReactiveComponent } from './person-form-reactive/person-form-reactive.component';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { DisplayUserInfoComponent } from './display-user-info/display-user-info.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { LoginPageComponent } from './login-page/login-page.component';
     SharedComponent,
     PersonFormComponent,
     PersonFormReactiveComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    DisplayUserInfoComponent
   ],
   imports: [
     BrowserModule,

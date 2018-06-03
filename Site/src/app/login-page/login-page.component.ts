@@ -21,7 +21,7 @@ export class LoginPageComponent implements OnInit {
 
   onSubmit() {
     if (this.model.UserName === this.model.Password) {
-      alert('logged in!');
+      localStorage.setItem('user_info', JSON.stringify({ Name : this.model.UserName }));
       this.validationMessageVisible = false;
     } else {
       this.validationMessageVisible = true;
